@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지휘자 강한결 디지털 명함</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Light gradient background based on the provided image */
+            background: linear-gradient(135deg, #e0f2fe, #f0f9ff); /* Light blue to very light blue */
+            min-height: 100vh; /* Ensure background covers full height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            color: #334155; /* Dark text for contrast on light background */
+        }
+        .digital-card {
+            background-color: #ffffff; /* White card background */
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            padding: 2.5rem; /* Increased padding */
+            max-width: 450px; /* Slightly wider for more content */
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e2e8f0; /* Subtle light border */
+        }
+        .name {
+            font-size: 2.2rem; /* Slightly smaller name font */
+            font-weight: 800; /* Extra bold for name */
+            color: #1a202c; /* Darker color for name */
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        .title {
+            font-size: 1.3rem; /* Slightly smaller title */
+            font-weight: 600; /* Semi-bold for title */
+            color: #4a5568; /* Medium gray for title */
+            margin-bottom: 1.5rem;
+        }
+        .contact-info p, .details-list li {
+            font-size: 1rem; /* Adjusted font size for details */
+            color: #475569; /* Slightly darker gray for general text */
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        /* Ensure bold text within list items is clearly visible */
+        .details-list li strong, .details-list li .font-bold {
+            font-weight: 700; /* Explicitly bold for content within list items */
+            color: #1a202c; /* Darker color for bolded text */
+        }
+        .contact-info a, .details-list a {
+            color: #2563eb; /* Blue for links */
+            transition: color 0.2s ease-in-out;
+        }
+        .contact-info a:hover, .details-list a:hover {
+            color: #1d4ed8; /* Darker blue on hover */
+            text-decoration: underline;
+        }
+        .details-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed #cbd5e0; /* Light dashed separator */
+            text-align: left; /* Align details to left */
+        }
+        .details-section h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2563eb; /* Blue for section titles */
+            margin-bottom: 0.75rem;
+            text-align: center; /* Center section titles */
+        }
+        .details-list {
+            list-style: none; /* Remove default list bullets */
+            padding-left: 0;
+        }
+        .details-list li {
+            position: relative;
+            padding-left: 1.5rem; /* Space for custom bullet */
+        }
+        .details-list li::before {
+            content: '•'; /* Custom bullet point */
+            position: absolute;
+            left: 0;
+            color: #2563eb; /* Blue bullet */
+            font-weight: bold;
+        }
+        /* Removed .profile-button styles as the button is removed */
+    </style>
+</head>
+<body>
+    <div class="digital-card">
+        <h1 class="name">강한결</h1>
+        <p class="title">지휘자 (Conductor)</p>
+
+        <div class="contact-info mb-4">
+            <p>이메일: <a href="mailto:contact@hankyeolkang.com">contact@hankyeolkang.com</a></p>
+            <p>전화: <a href="tel:+821012345678">+82 10-1234-5678</a></p>
+        </div>
+
+        <div class="details-section">
+            <h3>학력</h3>
+            <ul class="details-list">
+                <li><span class="font-bold">한국예술종합학교</span> 지휘과 졸업 (사사: 정치용 교수)</li>
+                <li><span class="font-bold">오스트리아 그라츠 국립음대</span> 오케스트라 지휘과 석사 졸업 (사사: Marc Piollet 교수)</li>
+            </ul>
+        </div>
+
+        <div class="details-section">
+            <h3>주요 연주 이력</h3>
+            <ul class="details-list">
+                <li><span class="font-bold">현재</span>: 한국예술종합학교 오케스트라 지휘자 및 지휘 전공 강사 재직</li>
+                <li><span class="font-bold">국내 주요 지휘</span>: 강남심포니, 인천시립, 경기필하모닉, 서울시립교향악단 등</li>
+                <li><span class="font-bold">해외 주요 지휘</span>: 사바리아 심포니, 흐라데츠 크랄로베 필하모닉, 로얄 카메라타 등</li>
+                <li>2017년 경기필하모닉 지휘 마스터클래스 참여</li>
+                <li>인천시립교향악단 젊은 지휘자 데뷔 연주 선발</li>
+                <li>연주 영상: <a href="https://www.youtube.com/@hankyeolkang6352" target="_blank" class="font-bold">Hankyeol Kang - YouTube</a></li>
+            </ul>
+        </div>
+
+        <div class="details-section">
+            <h3>언론 보도</h3>
+            <ul class="details-list">
+                <li><a href="http://m.newsnr.net/15536" target="_blank" class="font-bold">"[뉴스와종교] 군산시립교향악단, 제162회 정기연주 '신춘음악회' - 2025.03.12"</a></li>
+                <li><a href="https://www.karts.ac.kr/cop/bbs/selectBoardArticle.do?siteId=SITE_000000000000001&bbsId=BBSMSTR_000000000013&nttNo=65104" target="_blank" class="font-bold">"한국예술영재교육원, 제20회 KNIGA 심포니 오케스트라 정기연주회 개최 - 2024.06.27"</a></li>
+                <li><a href="http://www.shilbo.kr/news/articleView.html?idxno=29141" target="_blank" class="font-bold">"인천시립교향악단 제2회 차세대 지휘자 데뷔 콘서트 - 2017.07.27"</a></li>
+            </ul>
+        </div>
+
+        </div>
+</body>
+</html>
